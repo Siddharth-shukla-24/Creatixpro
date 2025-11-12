@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
 :root{
   --main-color: #3867d6;
 }
@@ -14,25 +15,30 @@
     text-transform: capitalize;
     transition: .2s linear;
 }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
 }
+
 html::-webkit-scrollbar{
     width: 1rem;
-}
+    }
+
 html::-webkit-scrollbar-track{
     background: #444;
 }
+
 html::-webkit-scrollbar-thumb{
     background: var(--main-color);
     border-radius: 5rem;
-}
+    }
+
 body{
     background: #222;
-}
+}    
 section{
     padding: 2rem 9%;
 }
@@ -43,6 +49,7 @@ section{
     text-transform: uppercase;
     font-size: 4rem;
 }
+
 .heading span{
     color: var(--main-color);
     text-transform: uppercase;
@@ -72,8 +79,8 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 9%;
-    width: 100%;
 }
+
 .header .logo{
     font-weight: bolder;
     color: #fff;
@@ -87,37 +94,245 @@ section{
     color: #fff;
     margin-left: 2rem;
 }
+
 .header .navbar a:hover{
     color: var(--main-color);
 }
+
 #menu-bars{
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
     display: none;
-    z-index: 10001; /* keeps button clickable */
 }
 
-/* Responsive styles */
+.home .content{
+       text-align: center;
+       padding-top: 6rem;
+       margin: 2rem auto;
+       max-width: 70rem ;
+}
+
+.home .content h3{
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content h3 span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide{
+    overflow: hidden;
+    border-radius: .5rem;
+    height: 50rem;
+    width: 35rem;
+}
+.home .home-slider .swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box{
+    border-radius: .5rem;
+    background: #333;
+    text-align: center;
+    padding: 2.5rem;
+}
+.services .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    background: var(--main-color);
+    color: #fff;
+}
+.services .box-container .box h3{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+.services .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    line-height: 1.8;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.about.row.image img{
+    width: 100%;
+    border-radius: .5rem;
+    border: 1rem solid #333;
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+}
+
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: #fff;
+}
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+    line-height: 2;
+}
+.gallery .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+}
+.gallery .box-container .box{
+    position: relative;
+    border: 1rem solid #333;
+    border-radius: .5rem;
+    height: 25rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+.gallery .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery .box-container .box:hover img{
+    transform: scale(1.1);
+    fill: grayscale();
+}
+.gallery .box-container .box .title{
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size:2rem;
+}
+
+
+
+
+
+.contact form{
+    max-width:70rem;
+    margin:1rem auto;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .inputBox input,
+.contact form textarea{
+    background: #333;
+    width: 100%;
+    padding: 1rem;
+    margin: .7rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: none;
+    border-radius: .5rem;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder{
+    color: #eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus{
+    background: #444;
+}
+.contact form .inputBox input{
+    width: 49%;
+}
+.contact form textarea{
+     resize: none;
+}
+.footer{
+    background: #111;
+}
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: #fff;
+}
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #eee;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: var(--main-color);
+}
+.footer .box-container .box a:hover i{
+    padding-right: 1.5rem;
+    color: #fff;
+}
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid #222;
+    color: #fff;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+ 
 @media(max-width:991px){
     html{
-        font-size: 55%;
-    }
-    .header{
-        padding: 1.5rem 2rem;
-    }
-    section{
-        padding: 2rem;
-    }
+    font-size: 55%;
+}
+.header{
+    padding: 1.5rem 2rem;
+}
+section{
+    padding: 2rem;
+}
 }
 
 @media(max-width:768px){
     #menu-bars{
-        display: block;
+        display: initial;
     }
-    .header{
-        padding: 1.5rem 0.5rem;
-    }
+
     .header .navbar{
         position: absolute;
         top: 100%;
@@ -126,16 +341,16 @@ section{
         border-top: .1rem solid #222;
         background: #333;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        width: 100%;
-        transition: clip-path 0.4s ease;
-        z-index: 10000;
     }
+
     .header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+
     .fa-times{
         transform: rotate(180deg);
     }
+
     .header .navbar a{
         display: flex;
         background: #222;
@@ -144,16 +359,27 @@ section{
         margin: 1.3rem;
         font-size: 2rem;
     }
+    .hone .content h3{
+        font-size: 4rem;
+    }
 }
+
 
 @media(max-width:450px){
     html{
-        font-size: 50%;
-    }
-    .home .home-slider .swiper-slide{
-        width: 27rem;
-    }
-    .contact form .inputBox input{
-        width: 100%;
-    }
+    font-size: 50%;
 }
+.home .home-slider .swiper-slide{
+    width: 27rem;
+}
+.contact form .inputBox input{
+    width: 100%;
+}
+}
+
+
+
+
+
+
+
